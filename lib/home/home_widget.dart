@@ -39,7 +39,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   'Igreja Adventista da',
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Work Sans',
-                        color: FlutterFlowTheme.of(context).primaryText,
+                        color: FlutterFlowTheme.of(context).primaryBackground,
                         fontWeight: FontWeight.normal,
                       ),
                 ),
@@ -51,7 +51,10 @@ class _HomeWidgetState extends State<HomeWidget> {
               children: [
                 Text(
                   'VILA AURORA',
-                  style: FlutterFlowTheme.of(context).title1,
+                  style: FlutterFlowTheme.of(context).title1.override(
+                        fontFamily: 'Work Sans',
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                      ),
                 ),
               ],
             ),

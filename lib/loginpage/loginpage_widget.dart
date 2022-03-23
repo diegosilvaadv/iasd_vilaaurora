@@ -102,10 +102,10 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                     indicatorColor: FlutterFlowTheme.of(context).primaryText,
                     tabs: [
                       Tab(
-                        text: 'Login',
+                        text: 'Entrar',
                       ),
                       Tab(
-                        text: 'Create Account',
+                        text: 'Criar Conta',
                       ),
                     ],
                   ),

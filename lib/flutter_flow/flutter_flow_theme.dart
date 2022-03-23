@@ -38,6 +38,8 @@ abstract class FlutterFlowTheme {
   Color primaryText;
   Color secondaryText;
 
+  Color brancoEPreto;
+
   TextStyle get title1 => GoogleFonts.getFont(
         'Work Sans',
         color: primaryText,
@@ -93,6 +95,8 @@ class LightModeTheme extends FlutterFlowTheme {
   Color secondaryBackground = const Color(0xFFCFCFCF);
   Color primaryText = const Color(0xFF6B705C);
   Color secondaryText = const Color(0xFFA5A58D);
+
+  Color brancoEPreto = Color(0xFF000000);
 }
 
 class DarkModeTheme extends FlutterFlowTheme {
@@ -104,6 +108,8 @@ class DarkModeTheme extends FlutterFlowTheme {
   Color secondaryBackground = const Color(0xFF1D1D1D);
   Color primaryText = const Color(0xFFFFE8D6);
   Color secondaryText = const Color(0xFFB7B7A4);
+
+  Color brancoEPreto = Color(0xFFFFFFFF);
 }
 
 extension TextStyleHelper on TextStyle {
