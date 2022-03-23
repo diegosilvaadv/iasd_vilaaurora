@@ -54,7 +54,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Seja Bem vindo(a) a',
+                  'Seja Bem vindo(a) ao',
                   style: FlutterFlowTheme.of(context).title1.override(
                         fontFamily: 'Lexend Deca',
                         color: FlutterFlowTheme.of(context).primaryText,
@@ -80,7 +80,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                   child: Text(
-                    'VILA AURORA',
+                    'Dist. do Jaraguá',
                     style: FlutterFlowTheme.of(context).title1.override(
                           fontFamily: 'Work Sans',
                           fontSize: 30,

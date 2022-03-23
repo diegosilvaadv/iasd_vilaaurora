@@ -54,7 +54,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Igreja Adventista da',
+                      'Igreja Adventista do',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -68,7 +68,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'VILA AURORA',
+                      'DIST. JARAGUÁ',
                       style: FlutterFlowTheme.of(context).title1.override(
                             fontFamily: 'Work Sans',
                             color: FlutterFlowTheme.of(context).primaryText,

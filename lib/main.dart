@@ -9,8 +9,10 @@ import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:iasd_vila_aurora/loginpage/loginpage_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'home/home_widget.dart';
+import 'igrejas/igrejas_widget.dart';
 import 'perfil/perfil_widget.dart';
 
 void main() async {
@@ -116,6 +118,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'home': HomeWidget(),
+      'igrejas': IgrejasWidget(),
       'Perfil': PerfilWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
@@ -141,6 +144,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24,
             ),
             label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.church,
+              size: 24,
+            ),
+            label: 'Igrejas',
             tooltip: '',
           ),
           BottomNavigationBarItem(
