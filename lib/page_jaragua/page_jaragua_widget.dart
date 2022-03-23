@@ -2,6 +2,7 @@ import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -87,39 +88,46 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           ),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.people_sharp,
-                                      color: Colors.black,
-                                      size: 70,
+                            child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.people_sharp,
+                                        color: Colors.black,
+                                        size: 70,
+                                      ),
+                                    ],
+                                  ),
+                                  SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        AutoSizeText(
+                                          'Escala de \nPREGADORES',
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Work Sans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                              ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      'Escala de \nPREGADORES',
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Work Sans',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                          ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
