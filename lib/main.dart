@@ -8,8 +8,8 @@ import 'auth/auth_util.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/internationalization.dart';
-import 'package:iasd_vila_aurora/home/home_widget.dart';
 import 'package:iasd_vila_aurora/loginpage/loginpage_widget.dart';
+import 'package:iasd_vila_aurora/home/home_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -85,8 +85,8 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser.loggedIn
-              ? LoginpageWidget()
-              : HomeWidget(),
+              ? HomeWidget()
+              : LoginpageWidget(),
     );
   }
 }

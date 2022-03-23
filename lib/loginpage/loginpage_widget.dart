@@ -54,7 +54,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Seja Bem vindo(a)',
+                  'Seja Bem vindo(a) a',
                   style: FlutterFlowTheme.of(context).title1.override(
                         fontFamily: 'Lexend Deca',
                         color: FlutterFlowTheme.of(context).primaryText,
@@ -457,7 +457,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                 context,
                                                 MaterialPageRoute(
                                                   builder: (context) =>
-                                                      LoginpageWidget(),
+                                                      HomeWidget(),
                                                 ),
                                                 (r) => false,
                                               );
@@ -922,7 +922,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                 context,
                                                 MaterialPageRoute(
                                                   builder: (context) =>
-                                                      LoginpageWidget(),
+                                                      HomeWidget(),
                                                 ),
                                                 (r) => false,
                                               );
