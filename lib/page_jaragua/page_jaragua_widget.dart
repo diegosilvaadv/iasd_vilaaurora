@@ -1,5 +1,4 @@
 import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -20,34 +19,6 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
-        automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 70,
-          icon: Icon(
-            Icons.chevron_left,
-            color: FlutterFlowTheme.of(context).alternate,
-            size: 40,
-          ),
-          onPressed: () {
-            print('IconButton pressed ...');
-          },
-        ),
-        title: Text(
-          'IASD JARAGUÁ',
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Work Sans',
-                color: FlutterFlowTheme.of(context).primaryBackground,
-              ),
-        ),
-        actions: [],
-        centerTitle: true,
-        elevation: 2,
-      ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: GestureDetector(
@@ -55,6 +26,58 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: Color(0xFFF5F5F5),
+                          child: Stack(
+                            children: [
+                              Image.network(
+                                'https://picsum.photos/seed/170/600',
+                                width: MediaQuery.of(context).size.width,
+                                height: 100,
+                                fit: BoxFit.fill,
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-0.07, 0.81),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 40, 0, 0),
+                                  child: Text(
+                                    'IASD JARAGUÁ',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .title1
+                                        .override(
+                                          fontFamily: 'Work Sans',
+                                          color: Colors.white,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 10, 0, 0),
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.white,
+                                  size: 24,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               Expanded(
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 5),
