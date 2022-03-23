@@ -471,7 +471,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           controller: createEmailController,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText: 'Email Address',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -482,8 +481,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText:
-                                                'Enter your email here...',
+                                            hintText: 'Endereço de E-mail',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -539,7 +537,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           obscureText:
                                               !createPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Password',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -550,7 +547,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'Enter your password',
+                                            hintText: 'Senha',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -620,7 +617,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           obscureText:
                                               !confirmPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Confirm Password',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -631,8 +627,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText:
-                                                'Enter the same password as above.',
+                                            hintText: 'Confirmar Senha',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -696,7 +691,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                     controller: textController2,
                                     obscureText: !passwordVisibility,
                                     decoration: InputDecoration(
-                                      labelText: 'Codigo de acesso',
+                                      hintText: 'Codigo de acesso',
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Colors.white,
@@ -731,7 +726,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                         .bodyText1
                                         .override(
                                           fontFamily: 'Work Sans',
-                                          color: Color(0xFF9D9D9D),
+                                          color: Color(0xFF2B343A),
+                                          fontWeight: FontWeight.normal,
                                         ),
                                   ),
                                 ),
