@@ -21,6 +21,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
   TextEditingController createEmailController;
   TextEditingController createPasswordController;
   bool createPasswordVisibility;
+  TextEditingController textController2;
   TextEditingController loginEmailAddressController;
   TextEditingController loginPasswordController;
   bool loginPasswordVisibility;
@@ -34,6 +35,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
     createEmailController = TextEditingController();
     createPasswordController = TextEditingController();
     createPasswordVisibility = false;
+    textController2 = TextEditingController();
     loginEmailAddressController = TextEditingController();
     loginPasswordController = TextEditingController();
     loginPasswordVisibility = false;
@@ -805,39 +807,89 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                     ],
                                   ),
                                 ),
+                                TextFormField(
+                                  controller: textController2,
+                                  obscureText: false,
+                                  decoration: InputDecoration(
+                                    hintText: '[Some hint text...]',
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1,
+                                      ),
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(4.0),
+                                        topRight: Radius.circular(4.0),
+                                      ),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1,
+                                      ),
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(4.0),
+                                        topRight: Radius.circular(4.0),
+                                      ),
+                                    ),
+                                  ),
+                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 20, 0, 0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      if (createPasswordController.text !=
-                                          confirmPasswordController.text) {
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(
-                                          SnackBar(
-                                            content: Text(
-                                              'Passwords don\'t match!',
+                                      if ((textController2.text) == '123') {
+                                        if (createPasswordController.text !=
+                                            confirmPasswordController.text) {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                'Passwords don\'t match!',
+                                              ),
                                             ),
+                                          );
+                                          return;
+                                        }
+
+                                        final user =
+                                            await createAccountWithEmail(
+                                          context,
+                                          createEmailController.text,
+                                          createPasswordController.text,
+                                        );
+                                        if (user == null) {
+                                          return;
+                                        }
+
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => HomeWidget(),
                                           ),
                                         );
-                                        return;
+                                      } else {
+                                        await showDialog(
+                                          context: context,
+                                          builder: (alertDialogContext) {
+                                            return AlertDialog(
+                                              title: Text('Acesso Negado! ):'),
+                                              content: Text(
+                                                  'Entre em contato com os administradores.'),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Navigator.pop(
+                                                          alertDialogContext),
+                                                  child: Text('Ok'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
                                       }
-
-                                      final user = await createAccountWithEmail(
-                                        context,
-                                        createEmailController.text,
-                                        createPasswordController.text,
-                                      );
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => HomeWidget(),
-                                        ),
-                                      );
                                     },
                                     text: 'Criar Conta',
                                     options: FFButtonOptions(
