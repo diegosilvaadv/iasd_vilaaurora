@@ -115,8 +115,8 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment.start,
                                               children: [
-                                                Text(
-                                                  'Informaçoes da igreja aqui. ',
+                                                AutoSizeText(
+                                                  'Informaçoes da igreja aqui. \n Informaçoes da igreja aqui. \nInformaçoes da igreja aqui. ',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
