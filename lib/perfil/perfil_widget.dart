@@ -284,67 +284,121 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            shape: BoxShape.rectangle,
-                            border: Border.all(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              width: 1,
-                            ),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                                child: Icon(
-                                  Icons.subtitles_rounded,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  size: 24,
+                    if (!(Theme.of(context).brightness == Brightness.dark) ??
+                        true)
+                      InkWell(
+                        onTap: () async {
+                          setDarkModeSetting(context, ThemeMode.dark);
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                shape: BoxShape.rectangle,
+                                border: Border.all(
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  width: 1,
                                 ),
                               ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                                child: Text(
-                                  'Order History',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Lexend Deca',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.9, 0),
-                                  child: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 18,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12, 0, 0, 0),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.solidMoon,
+                                      color: FlutterFlowTheme.of(context)
+                                          .brancoEPreto,
+                                      size: 24,
+                                    ),
                                   ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12, 0, 0, 0),
+                                    child: Text(
+                                      'Tema Escuro',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .brancoEPreto,
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    if (Theme.of(context).brightness == Brightness.dark ?? true)
+                      InkWell(
+                        onTap: () async {
+                          setDarkModeSetting(context, ThemeMode.light);
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                shape: BoxShape.rectangle,
+                                border: Border.all(
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  width: 1,
                                 ),
                               ),
-                            ],
-                          ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12, 0, 0, 0),
+                                    child: Icon(
+                                      Icons.wb_sunny,
+                                      color: FlutterFlowTheme.of(context)
+                                          .brancoEPreto,
+                                      size: 24,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12, 0, 0, 0),
+                                    child: Text(
+                                      'Tema Claro',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .brancoEPreto,
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
