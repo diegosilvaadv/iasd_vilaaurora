@@ -185,7 +185,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                               loginEmailAddressController,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText: 'Email Address',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -196,8 +195,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText:
-                                                'Enter your email here...',
+                                            hintText: 'Endereço de E-mail',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -252,7 +250,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           controller: loginPasswordController,
                                           obscureText: !loginPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Password',
+                                            labelText: 'Senha',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
