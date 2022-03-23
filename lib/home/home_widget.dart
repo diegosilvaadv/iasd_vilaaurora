@@ -37,7 +37,7 @@ class _HomeWidgetState extends State<HomeWidget> {
         return Scaffold(
           key: scaffoldKey,
           appBar: AppBar(
-            backgroundColor: Color(0x00CB997E),
+            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             automaticallyImplyLeading: false,
             leading: Image.network(
               '',
