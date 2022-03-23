@@ -102,10 +102,10 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                     indicatorColor: FlutterFlowTheme.of(context).primaryText,
                     tabs: [
                       Tab(
-                        text: 'Acessar',
+                        text: 'Login',
                       ),
                       Tab(
-                        text: 'Criar Conta',
+                        text: 'Create Account',
                       ),
                     ],
                   ),
@@ -183,6 +183,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                               loginEmailAddressController,
                                           obscureText: false,
                                           decoration: InputDecoration(
+                                            labelText: 'Email Address',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -193,7 +194,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'E-mail',
+                                            hintText:
+                                                'Enter your email here...',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -248,6 +250,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           controller: loginPasswordController,
                                           obscureText: !loginPasswordVisibility,
                                           decoration: InputDecoration(
+                                            labelText: 'Password',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -258,7 +261,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'Senha',
+                                            hintText:
+                                                'Enter your email here...',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -583,6 +587,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           controller: createEmailController,
                                           obscureText: false,
                                           decoration: InputDecoration(
+                                            labelText: 'Email Address',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -593,7 +598,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'E-mail',
+                                            hintText:
+                                                'Enter your email here...',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -649,6 +655,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           obscureText:
                                               !createPasswordVisibility,
                                           decoration: InputDecoration(
+                                            labelText: 'Password',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -659,7 +666,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'Senha',
+                                            hintText: 'Enter your password',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -729,6 +736,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           obscureText:
                                               !confirmPasswordVisibility,
                                           decoration: InputDecoration(
+                                            labelText: 'Confirm Password',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -740,7 +748,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                           FontWeight.normal,
                                                     ),
                                             hintText:
-                                                'Digite a Senha Novamente',
+                                                'Enter the same password as above.',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1

@@ -1,5 +1,6 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../perfil/perfil_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,16 +21,67 @@ class _HomeWidgetState extends State<HomeWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
-        title: Text(
-          'Page Title',
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Work Sans',
-                color: Colors.white,
-                fontSize: 22,
-              ),
+        leading: Image.network(
+          '',
+          width: 100,
+          height: 100,
+          fit: BoxFit.cover,
         ),
-        actions: [],
-        centerTitle: false,
+        title: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Igreja Adventista da',
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Work Sans',
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        fontWeight: FontWeight.normal,
+                      ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'VILA AURORA',
+                  style: FlutterFlowTheme.of(context).title1,
+                ),
+              ],
+            ),
+          ],
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 5),
+            child: InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PerfilWidget(),
+                  ),
+                );
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: Image.asset(
+                  'assets/images/channels4_profile-removebg-preview.png',
+                  width: 50,
+                  height: 50,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+        ],
+        centerTitle: true,
         elevation: 2,
       ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
