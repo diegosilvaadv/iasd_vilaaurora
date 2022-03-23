@@ -52,6 +52,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                           color: FlutterFlowTheme.of(context).brancoEPreto,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
@@ -155,6 +156,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                           color: FlutterFlowTheme.of(context).brancoEPreto,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
@@ -259,6 +261,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                           color: FlutterFlowTheme.of(context).brancoEPreto,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
@@ -360,6 +363,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                           color: FlutterFlowTheme.of(context).brancoEPreto,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
