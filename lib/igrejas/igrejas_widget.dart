@@ -255,55 +255,55 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Image.network(
-                                            'https://picsum.photos/seed/824/600',
-                                            width: 100,
-                                            height: 100,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5, 5, 5, 5),
-                                    child: SingleChildScrollView(
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Image.network(
+                                              'https://picsum.photos/seed/824/600',
+                                              width: 100,
+                                              height: 100,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5, 5, 5, 5),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          SingleChildScrollView(
-                                            scrollDirection: Axis.horizontal,
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              children: [
-                                                AutoSizeText(
-                                                  'IASD Jd. Panamericano',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .title1
-                                                      .override(
-                                                        fontFamily: 'Work Sans',
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              AutoSizeText(
+                                                'IASD Jd. Panamericano',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .title1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Work Sans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryBackground,
+                                                        ),
+                                              ),
+                                            ],
                                           ),
                                           Padding(
                                             padding:
@@ -334,8 +334,8 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                         ],
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ],
                           ),

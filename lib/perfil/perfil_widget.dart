@@ -266,6 +266,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                 ),
                 ListView(
                   padding: EdgeInsets.zero,
+                  primary: false,
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   children: [
