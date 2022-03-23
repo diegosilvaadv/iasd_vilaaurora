@@ -2,7 +2,7 @@ import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../home/home_widget.dart';
+import '../main.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -338,7 +338,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                       await Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => HomeWidget(),
+                                          builder: (context) =>
+                                              NavBarPage(initialPage: 'home'),
                                         ),
                                       );
                                     },
@@ -463,7 +464,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                 context,
                                                 MaterialPageRoute(
                                                   builder: (context) =>
-                                                      HomeWidget(),
+                                                      NavBarPage(
+                                                          initialPage: 'home'),
                                                 ),
                                                 (r) => false,
                                               );
@@ -487,8 +489,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           await Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) =>
-                                                  HomeWidget(),
+                                              builder: (context) => NavBarPage(
+                                                  initialPage: 'home'),
                                             ),
                                           );
                                         },
@@ -867,7 +869,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => HomeWidget(),
+                                            builder: (context) =>
+                                                NavBarPage(initialPage: 'home'),
                                           ),
                                         );
                                       } else {
@@ -982,7 +985,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                 context,
                                                 MaterialPageRoute(
                                                   builder: (context) =>
-                                                      HomeWidget(),
+                                                      NavBarPage(
+                                                          initialPage: 'home'),
                                                 ),
                                                 (r) => false,
                                               );
@@ -1006,8 +1010,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           await Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) =>
-                                                  HomeWidget(),
+                                              builder: (context) => NavBarPage(
+                                                  initialPage: 'home'),
                                             ),
                                           );
                                         },

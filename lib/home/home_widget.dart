@@ -2,7 +2,7 @@ import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../perfil/perfil_widget.dart';
+import '../main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -37,7 +37,7 @@ class _HomeWidgetState extends State<HomeWidget> {
         return Scaffold(
           key: scaffoldKey,
           appBar: AppBar(
-            backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+            backgroundColor: Color(0x00CB997E),
             automaticallyImplyLeading: false,
             leading: Image.network(
               '',
@@ -57,8 +57,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       'Igreja Adventista da',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Work Sans',
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).secondaryText,
                             fontWeight: FontWeight.normal,
                           ),
                     ),
@@ -72,8 +71,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       'VILA AURORA',
                       style: FlutterFlowTheme.of(context).title1.override(
                             fontFamily: 'Work Sans',
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).primaryText,
                           ),
                     ),
                   ],
@@ -88,7 +86,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PerfilWidget(),
+                        builder: (context) => NavBarPage(initialPage: 'Perfil'),
                       ),
                     );
                   },
