@@ -14,13 +14,12 @@ class LoginpageWidget extends StatefulWidget {
 }
 
 class _LoginpageWidgetState extends State<LoginpageWidget> {
+  TextEditingController codigodeacessoController;
   TextEditingController confirmPasswordController;
   bool confirmPasswordVisibility;
   TextEditingController createEmailController;
   TextEditingController createPasswordController;
   bool createPasswordVisibility;
-  TextEditingController textController2;
-  bool passwordVisibility;
   TextEditingController loginEmailAddressController;
   TextEditingController loginPasswordController;
   bool loginPasswordVisibility;
@@ -29,13 +28,12 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
   @override
   void initState() {
     super.initState();
+    codigodeacessoController = TextEditingController();
     confirmPasswordController = TextEditingController();
     confirmPasswordVisibility = false;
     createEmailController = TextEditingController();
     createPasswordController = TextEditingController();
     createPasswordVisibility = false;
-    textController2 = TextEditingController();
-    passwordVisibility = false;
     loginEmailAddressController = TextEditingController();
     loginPasswordController = TextEditingController();
     loginPasswordVisibility = false;
@@ -250,7 +248,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                           controller: loginPasswordController,
                                           obscureText: !loginPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Senha',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -261,8 +258,7 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText:
-                                                'Enter your email here...',
+                                            hintText: 'Senha',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -686,10 +682,24 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20, 16, 20, 0),
                                   child: TextFormField(
-                                    controller: textController2,
-                                    obscureText: !passwordVisibility,
+                                    controller: codigodeacessoController,
+                                    obscureText: false,
                                     decoration: InputDecoration(
+                                      labelStyle: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Work Sans',
+                                            color: Color(0xFF2B343A),
+                                            fontWeight: FontWeight.normal,
+                                          ),
                                       hintText: 'Codigo de acesso',
+                                      hintStyle: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Work Sans',
+                                            color: Color(0xFF2B343A),
+                                            fontWeight: FontWeight.normal,
+                                          ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Colors.white,
@@ -706,19 +716,6 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                       ),
                                       filled: true,
                                       fillColor: Colors.white,
-                                      suffixIcon: InkWell(
-                                        onTap: () => setState(
-                                          () => passwordVisibility =
-                                              !passwordVisibility,
-                                        ),
-                                        child: Icon(
-                                          passwordVisibility
-                                              ? Icons.visibility_outlined
-                                              : Icons.visibility_off_outlined,
-                                          color: Color(0xFF757575),
-                                          size: 22,
-                                        ),
-                                      ),
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
@@ -734,7 +731,8 @@ class _LoginpageWidgetState extends State<LoginpageWidget> {
                                       0, 20, 0, 0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      if ((textController2.text) == '123') {
+                                      if ((codigodeacessoController.text) ==
+                                          '123') {
                                         if (createPasswordController.text !=
                                             confirmPasswordController.text) {
                                           ScaffoldMessenger.of(context)
