@@ -86,7 +86,7 @@ class _EscPregadoresJaraguaWidgetState
                             clipBehavior: Clip.antiAliasWithSaveLayer,
                             color: FlutterFlowTheme.of(context).primaryColor,
                             child: Text(
-                              widget.nome,
+                              columnJaraguaPregadoresRecord.nome,
                               style: FlutterFlowTheme.of(context).bodyText1,
                             ),
                           ),
