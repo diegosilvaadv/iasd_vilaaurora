@@ -1,5 +1,5 @@
 import '../backend/backend.dart';
-import '../escala_pregadores/escala_pregadores_widget.dart';
+import '../esc_pregadores_jaragua/esc_pregadores_jaragua_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -93,7 +93,7 @@ class _PageIpanemaWidgetState extends State<PageIpanemaWidget> {
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EscalaPregadoresWidget(),
+                            builder: (context) => EscPregadoresJaraguaWidget(),
                           ),
                         );
                       },
