@@ -163,10 +163,41 @@ class _HomeWidgetState extends State<HomeWidget> {
                           decoration: BoxDecoration(
                             color: Color(0xFFEEEEEE),
                           ),
-                          child: ListView(
-                            padding: EdgeInsets.zero,
-                            scrollDirection: Axis.horizontal,
-                            children: [],
+                          child: StreamBuilder<List<AnunciosDistritalRecord>>(
+                            stream: queryAnunciosDistritalRecord(),
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50,
+                                    height: 50,
+                                    child: CircularProgressIndicator(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                    ),
+                                  ),
+                                );
+                              }
+                              List<AnunciosDistritalRecord>
+                                  listViewAnunciosDistritalRecordList =
+                                  snapshot.data;
+                              return ListView.builder(
+                                padding: EdgeInsets.zero,
+                                scrollDirection: Axis.horizontal,
+                                itemCount:
+                                    listViewAnunciosDistritalRecordList.length,
+                                itemBuilder: (context, listViewIndex) {
+                                  final listViewAnunciosDistritalRecord =
+                                      listViewAnunciosDistritalRecordList[
+                                          listViewIndex];
+                                  return Container(
+                                      width: 100,
+                                      height: 100,
+                                      color: Colors.green);
+                                },
+                              );
+                            },
                           ),
                         ),
                       ],
