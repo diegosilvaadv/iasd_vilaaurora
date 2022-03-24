@@ -38,36 +38,66 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                           color: Color(0xFFF5F5F5),
                           child: Stack(
                             children: [
-                              Image.network(
-                                'https://picsum.photos/seed/170/600',
+                              Image.asset(
+                                'assets/images/Design_sem_nome_(1).png',
                                 width: MediaQuery.of(context).size.width,
                                 height: 100,
                                 fit: BoxFit.fill,
                               ),
-                              Align(
-                                alignment: AlignmentDirectional(-0.07, 0.81),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 40, 0, 0),
-                                  child: Text(
-                                    'IASD JARAGUÁ',
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .title1
-                                        .override(
-                                          fontFamily: 'Work Sans',
-                                          color: Colors.white,
-                                        ),
-                                  ),
-                                ),
-                              ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10, 10, 0, 0),
-                                child: Icon(
-                                  Icons.arrow_back_ios,
-                                  color: Colors.white,
-                                  size: 24,
+                                child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFEEEEEE),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5, 0, 0, 0),
+                                    child: Icon(
+                                      Icons.arrow_back_ios,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(0.04, -1.18),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 85, 0, 0),
+                                  child: Container(
+                                    width: 185,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFEEEEEE),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Align(
+                                      alignment:
+                                          AlignmentDirectional(0.03, 1.08),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 2),
+                                        child: AutoSizeText(
+                                          'IASD JARAGUÁ',
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .title1
+                                              .override(
+                                                fontFamily: 'Work Sans',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .brancoEPreto,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
