@@ -224,8 +224,7 @@ class _EscPregadoresJaraguaWidgetState
                                               Text(
                                                 valueOrDefault<String>(
                                                   columnJaraguaPregadoresRecord
-                                                      .whatsapp
-                                                      .toString(),
+                                                      .whasapp,
                                                   'S/ Whats',
                                                 ),
                                                 style:
