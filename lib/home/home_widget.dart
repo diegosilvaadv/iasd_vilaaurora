@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../main.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -39,11 +40,38 @@ class _HomeWidgetState extends State<HomeWidget> {
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             automaticallyImplyLeading: false,
-            leading: Image.network(
-              '',
-              width: 100,
-              height: 100,
-              fit: BoxFit.cover,
+            leading: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                if (!(Theme.of(context).brightness == Brightness.dark) ?? true)
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        setDarkModeSetting(context, ThemeMode.dark);
+                      },
+                      child: FaIcon(
+                        FontAwesomeIcons.solidMoon,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                    ),
+                  ),
+                if (Theme.of(context).brightness == Brightness.dark ?? true)
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 10, 0, 0),
+                    child: InkWell(
+                      onTap: () async {
+                        setDarkModeSetting(context, ThemeMode.light);
+                      },
+                      child: Icon(
+                        Icons.wb_sunny,
+                        color: Colors.white,
+                        size: 35,
+                      ),
+                    ),
+                  ),
+              ],
             ),
             title: Column(
               mainAxisSize: MainAxisSize.max,

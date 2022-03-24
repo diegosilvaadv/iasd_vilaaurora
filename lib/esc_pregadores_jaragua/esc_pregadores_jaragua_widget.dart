@@ -39,7 +39,7 @@ class _EscPregadoresJaraguaWidgetState
           },
         ),
         title: Text(
-          'ESCALA DE PREGADORES',
+          'ESC DE PREGADORES',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Work Sans',
                 color: FlutterFlowTheme.of(context).primaryBackground,
