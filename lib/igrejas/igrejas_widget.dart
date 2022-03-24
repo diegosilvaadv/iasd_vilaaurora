@@ -79,8 +79,8 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Image.network(
-                                                'https://picsum.photos/seed/824/600',
+                                              Image.asset(
+                                                'assets/images/Design_sem_nome_(2).png',
                                                 width: 100,
                                                 height: 100,
                                                 fit: BoxFit.cover,
@@ -127,7 +127,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                                     MainAxisAlignment.start,
                                                 children: [
                                                   AutoSizeText(
-                                                    'Informaçoes da igreja aqui. \n Informaçoes da igreja aqui. \nInformaçoes da igreja aqui. ',
+                                                    'Rua Tomás Ribeiro Colaço, 315 \n Jardim Vivan - São Paulo, SP\nCEP: 02993-100',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyText1
@@ -143,6 +143,23 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                                   ),
                                                 ],
                                               ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Text(
+                                                  'IGREJA CENTRAL DO DISTRITO.',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Work Sans',
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .primaryBackground,
+                                                      ),
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
@@ -186,8 +203,8 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Image.network(
-                                              'https://picsum.photos/seed/824/600',
+                                            Image.asset(
+                                              'assets/images/Capturar.PNG',
                                               width: 100,
                                               height: 100,
                                               fit: BoxFit.cover,
@@ -234,7 +251,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Informaçoes da igreja aqui. ',
+                                                  'Avenida Alexios Jafet, 696 - \nJardim Ipanema - São Paulo, SP\nCEP: 05187-010',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
@@ -290,8 +307,8 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Image.network(
-                                              'https://picsum.photos/seed/824/600',
+                                            Image.asset(
+                                              'assets/images/panamericano.PNG',
                                               width: 100,
                                               height: 100,
                                               fit: BoxFit.cover,
@@ -336,7 +353,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Informaçoes da igreja aqui. ',
+                                                  'Rua Sebastião Laranjeiras, 244 \nJardim Panamericano - São Paulo, SP\nCEP: 02992-050',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
@@ -392,8 +409,8 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Image.network(
-                                              'https://picsum.photos/seed/824/600',
+                                            Image.asset(
+                                              'assets/images/Escala_da_Igreja_Adventista_do_Vila_Aurora_-_Dist._Jaragu._(1).png',
                                               width: 100,
                                               height: 100,
                                               fit: BoxFit.cover,
@@ -440,7 +457,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Informaçoes da igreja aqui. ',
+                                                  'Rua Giacomo Saratelli, 22A\nVila Aurora - São Paulo, SP\nCEP: 05186-090',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
