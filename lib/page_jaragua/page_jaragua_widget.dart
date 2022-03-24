@@ -35,14 +35,17 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                       Expanded(
                         child: Card(
                           clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: Color(0xFFF5F5F5),
+                          color: FlutterFlowTheme.of(context).primaryBackground,
                           child: Stack(
                             children: [
-                              Image.asset(
-                                'assets/images/Design_sem_nome_(1).png',
-                                width: MediaQuery.of(context).size.width,
-                                height: 100,
-                                fit: BoxFit.fill,
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/Design_sem_nome_(2).png',
+                                  width: 374,
+                                  height: 150,
+                                  fit: BoxFit.fitWidth,
+                                ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -69,12 +72,13 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                 alignment: AlignmentDirectional(0.04, -1.18),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 85, 0, 0),
+                                      0, 135, 0, 0),
                                   child: Container(
-                                    width: 185,
+                                    width: 200,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFEEEEEE),
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
                                       borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Align(
@@ -93,6 +97,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .brancoEPreto,
+                                                fontSize: 35,
                                               ),
                                         ),
                                       ),
