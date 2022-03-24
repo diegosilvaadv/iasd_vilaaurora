@@ -24,7 +24,7 @@ abstract class JaraguaPregadoresRecord
   String get igreja;
 
   @nullable
-  double get whatsapp;
+  String get whasapp;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -35,7 +35,7 @@ abstract class JaraguaPregadoresRecord
         ..nome = ''
         ..img = ''
         ..igreja = ''
-        ..whatsapp = 0.0;
+        ..whasapp = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('jaragua_pregadores');
@@ -65,7 +65,7 @@ Map<String, dynamic> createJaraguaPregadoresRecordData({
   DateTime data,
   String img,
   String igreja,
-  double whatsapp,
+  String whasapp,
 }) =>
     serializers.toFirestore(
         JaraguaPregadoresRecord.serializer,
@@ -74,4 +74,4 @@ Map<String, dynamic> createJaraguaPregadoresRecordData({
           ..data = data
           ..img = img
           ..igreja = igreja
-          ..whatsapp = whatsapp));
+          ..whasapp = whasapp));

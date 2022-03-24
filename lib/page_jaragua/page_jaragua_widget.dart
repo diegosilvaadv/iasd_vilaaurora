@@ -373,7 +373,7 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                                             MainAxisAlignment.center,
                                         children: [
                                           AutoSizeText(
-                                            'Escala da\nPASTORAL',
+                                            'Escala\nPASTORAL',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
@@ -397,6 +397,15 @@ class _PageJaraguaWidgetState extends State<PageJaraguaWidget> {
                     ],
                   ),
                 ),
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Text(
+                    'Hello World',
+                    style: FlutterFlowTheme.of(context).bodyText1,
+                  ),
+                ],
               ),
             ],
           ),
