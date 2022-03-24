@@ -409,7 +409,7 @@ class _IgrejasWidgetState extends State<IgrejasWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
